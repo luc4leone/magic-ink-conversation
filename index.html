@@ -29,8 +29,8 @@
         .chat-header {
             background: #075e54;
             color: white;
-            padding: 15px;
-            border-radius: 10px 10px 0 0;
+            padding: 4px 12px 4px 12px;
+            border-radius: 8px 8px 0 0;
             flex-shrink: 0;
         }
         
@@ -81,13 +81,14 @@
         }
 
         .reply-button {
+            font-size: 1.2em;
             background: #075e54;
             color: white;
             border: none;
-            padding: 10px 20px;
-            border-radius: 20px;
+            padding: 20px 40px;
+            border-radius: 12px;
             cursor: pointer;
-            margin: 10px;
+            margin: 8px;
             display: none;
         }
 
@@ -148,7 +149,7 @@
         <div class="chat-body" id="chat">
         </div>
         <div class="typing" id="typing">
-            Luca sta scrivendo...
+            Bret sta scrivendo...
         </div>
         <div class="chat-footer">
             <button id="replyButton" class="reply-button" disabled>Rispondi</button>
@@ -158,77 +159,77 @@
     <script>
         const conversation = [
             {
-                sender: "Luca",
-                text: "Ciao Marco! Ho appena pubblicato il mio articolo sulla progettazione del software. Ti andrebbe di parlarne? 😊",
+                sender: "Bret",
+                text: "Ciao! Ho appena pubblicato il mio articolo sulla progettazione del software. Ti andrebbe di parlarne? 😊",
                 response: "Certo! Ho sentito che è molto interessante. Di che si tratta? 🤔"
             },
             {
-                sender: "Luca",
+                sender: "Bret",
                 text: "Sai quando devi prenotare un volo e passi mezz'ora a cliccare menu a tendina, selezionare date e confrontare prezzi?",
                 response: "Oh sì, è terribilmente frustrante! 😫"
             },
             {
-                sender: "Luca",
+                sender: "Bret",
                 text: "Ecco, il punto è proprio questo. Stiamo progettando il software nel modo sbagliato. Pensiamo che più pulsanti e menu mettiamo, migliore sia l'interfaccia. Ma è esattamente l'opposto.",
                 response: "In che senso? 🤔"
             },
             {
-                sender: "Luca",
+                sender: "Bret",
                 text: "Pensa a questo: stai chattando con un amico sulla pizza per stasera. Il tuo telefono dovrebbe capirlo automaticamente e mostrarti una mappa con le pizzerie aperte nel raggio di un chilometro, magari evidenziando quelle con le recensioni migliori",
                 response: "Senza che io debba cercarle?"
             },
             {
-                sender: "Luca",
+                sender: "Bret",
                 text: "Esatto! Il software dovrebbe essere come un cameriere attento in un ristorante di lusso: anticipa i tuoi bisogni senza che tu debba chiedere continuamente",
                 response: "Interessante... ma come fa il software a sapere cosa voglio? 🤔"
             },
             {
-                sender: "Luca",
+                sender: "Bret",
                 text: "Ci sono tre fonti principali: l'ambiente, la storia e l'interazione corrente. Ho fatto un esperimento con il sistema della metropolitana qui a Boston...",
                 response: "Il BART widget di cui ho sentito parlare? 🤔"
             },
             {
-                sender: "Luca",
+                sender: "Bret",
                 text: "Proprio quello! Invece di farti selezionare manualmente stazione di partenza e arrivo ogni volta, il software impara dalle tue abitudini. Se ogni mattina prendi il treno dalle 8:00 da Cambridge a Downtown, dopo una settimana il sistema lo sa e ti mostra automaticamente gli orari rilevanti",
                 response: "Come Netflix quando ti suggerisce cosa guardare!"
             },
             {
-                sender: "Luca",
+                sender: "Bret",
                 text: "Esattamente! Ma possiamo fare molto di più. Immagina di star scrivendo la tua tesi. Il software potrebbe capire l'argomento e mostrarti automaticamente articoli rilevanti, grafici correlati, citazioni utili...",
                 response: "Senza dover aprire Google ogni due minuti...😓"
             },
             {
-                sender: "Luca",
+                sender: "Bret",
                 text: "E senza dover passare attraverso mille menu e finestre di dialogo. Il problema è che oggi progettiamo software come se fossero macchine da manipolare, quando dovrebbero essere più simili a libri intelligenti che si adattano al lettore",
                 response: "Ma non c'è il rischio che il software faccia troppe assunzioni sbagliate? 🤔"
             },
             {
-                sender: "Luca",
+                sender: "Bret",
                 text: "Ottima domanda! È per questo che ho sviluppato il concetto di 'livelli di confidenza'. Il software non deve essere sicuro al 100% per mostrarti qualcosa. Può presentarti le informazioni con diversi livelli di enfasi visiva basati sulla sua sicurezza che siano rilevanti",
                 response: "Come quando Google Maps ti mostra percorsi alternativi con diversi colori?   "
             },
             {
-                sender: "Luca",
+                sender: "Bret",
                 text: "Precisamente! E se il software si sbaglia, dovrebbe essere facile correggerlo. Non attraverso menu complicati di configurazione, ma semplicemente ignorando i suggerimenti non rilevanti",
                 response: "È come addestrare un assistente personale..."
             },
             {
-                sender: "Luca",
+                sender: "Bret",
                 text: "Esatto! E pensa al futuro: avremo dispositivi sottili come fogli di carta ma potenti come supercomputer. Non avrà senso interagire con loro attraverso minuscoli pulsanti e menu. Dovranno capirci e anticiparci",
                 response: "Oh, parlando di anticipare... devo andare a lezione!"
             },
             {
-                sender: "Luca",
+                sender: "Bret",
                 text: "Vedi? Il tuo telefono poteva mostrarti automaticamente il percorso per l'aula e avvisarti dieci minuti prima!",
                 response: "Ok, ora ho capito perché il tuo articolo sta facendo così tanto rumore. È un cambio di paradigma completo..."
             },
             {
-                sender: "Luca",
+                sender: "Bret",
                 text: "Esattamente. Non si tratta solo di rendere le interfacce più belle o più facili da usare. Si tratta di ripensare completamente il modo in cui interagiamo con l'informazione digitale",
                 response: `Devo assolutamente leggere l'<a href="https://worrydream.com/MagicInk/">articolo completo</a>!`
             },
             {
-                sender: "Luca",
+                sender: "Bret",
                 text: "Fallo! E se hai domande, sai dove trovarmi. Di solito sono qui al bar verso quest'ora... Il software lo saprebbe già!",
                 response: "Grazie! Vado!"
             }
@@ -241,7 +242,10 @@
             const chat = document.getElementById('chat');
             const messageDiv = document.createElement('div');
             messageDiv.className = `message ${isSent ? 'sent' : 'received'}`;
-            messageDiv.innerHTML = `${message}<span class="time">${new Date().toLocaleTimeString('it-IT', {hour: '2-digit', minute:'2-digit'})}</span>`;
+            messageDiv.innerHTML = `
+                ${message}
+                <span class="time">${new Date().toLocaleTimeString('it-IT', {hour: '2-digit', minute:'2-digit'})}</span>
+            `;
             chat.appendChild(messageDiv);
             chat.scrollTop = chat.scrollHeight;
         }
@@ -254,7 +258,7 @@
             document.getElementById('typing').style.visibility = 'hidden';
         }
 
-        function sendLucaMessage() {
+        function sendBretMessage() {
             if (currentIndex >= conversation.length) return;
             
             const message = conversation[currentIndex];
@@ -274,12 +278,12 @@
             currentIndex++;
             replyButton.disabled = true;
             
-            setTimeout(sendLucaMessage, 1000);
+            setTimeout(sendBretMessage, 1000);
         });
 
         document.addEventListener('DOMContentLoaded', () => {
             replyButton.style.display = 'inline-block';
-            sendLucaMessage();
+            sendBretMessage();
         });
     </script>
 </body>
